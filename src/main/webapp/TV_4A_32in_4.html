@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>TV_4A_32英寸_4</title>
+		<link rel="stylesheet" href="css/footer.css" />
+		<link rel="stylesheet" href="css/TV_4A_32in_4.css" />
+		<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/jquery.cookie.js" type="text/javascript"></script>
+		<script src="js/TV.js" type="text/javascript" charset="utf-8"></script>
+        <script>
+            function register() {
+                location.href="x_register.html";
+            }
+
+        </script>
+	</head>
+
+	<body>
+		<header>
+			<div class="y4_first_root">
+				<div class="y4_first_1">
+					<div class="y4_first_1_1">
+						<div>
+							<ul>
+								<li>
+									<a href="k_file.html"><img src="img/y4_first_1_1_2.png" /></a>
+								</li>
+								<li><img src="img/y4_first_1_1_1.png" /></li>
+							</ul>
+						</div>
+						<p>我的购物车<span>温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</span></p>
+					</div>
+					<div class="y4_first_1_2">
+						<div>
+                            <a href="x_login.html" class="loginBefore">登录</a>
+                            <div id="changeState">
+                                <p></p>
+                                <ul>
+                                    <li><a href="peopleCenter.html">个人中心</a></li>
+                                    <li>评价晒单</li>
+                                    <li>我的喜欢</li>
+                                    <li>小米账户</li>
+                                    <li id="loginOut">退出登陆</li>
+                                </ul>
+                            </div>
+						</div>
+						<span>|</span>
+                        <p class="loginBefore" onclick="register()">注册</p>
+						<p class="loginAfter">
+							<a href="javascript:(0)">我的订单</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="y4_sec_root">
+				<div class="y4_sec_1">
+					<div id="cartHead"><i class="checkbox" id="allCheckbox"></i><span>全选</span>
+						<span>商品名称</span><span>单价</span><span>数量</span><span>小计</span><span>操作</span>
+                    </div>
+                    <div id="goods" >
+                        <div class="good" style="display: none;">
+                        <p class="p_id"></p>
+                        <p class="p_count"></p>
+                        <p class="p_state"></p>
+                            <ul>
+                                <li><i class="checkbox sureGood"></i></li>
+                                <li><img src="img/y4_sec_1_1_2.jpg" alt="" width="80px" height="80px"/></li>
+                                <li>
+                                    <a href="javascript:void(0)"> 小米电视4A 32英寸 黑色 32英寸 </a>
+                                    <span></span>
+                                </li>
+                                <li class="unitPrice">899元<span></span> </li>
+                                <li><a href="javascript:void(0)" class="sub">-</a><input type="text" name="count" value="1" class="countChoose"/><a href="javascript:void(0)" class="add">+</a>
+                                    <p></p>
+                                </li>
+                                <li class="totalPrice"> </li>
+                                <li><span class="subGood"></span></li>
+                            </ul>
+                            <ol>
+
+                                <li class="checkedSer">
+                                    <ul >
+                                        <li></li>
+                                        <li><img src="img/y4_sec_1_1_4.jpg" alt="" width="60px" height="60px"/></li>
+                                        <li>
+                                            <a href="javascript:void(0)"> 影视会员年卡 </a>
+                                            <span> 小米影视会员年卡 </span>
+                                        </li>
+                                        <li class="unitPrice">299元<span>498元</span> </li>
+                                        <li><a href="javascript:void(0)" class="sub">-</a><input type="text" name="count" value="1"/><a href="javascript:void(0)" class="add add2">+</a>
+                                            <p></p>
+                                        </li>
+                                        <li class="totalPrice"> </li>
+                                        <li><span class="subSer"></span></li>
+                                    </ul>
+
+
+                                    <ul>
+                                        <li></li>
+                                        <li><img src="img/y4_sec_1_1_5.jpg" alt="" width="60px" height="60px"/></li>
+                                        <li>
+                                            <a href="javascript:void(0)"> 电视座装服务  </a>
+                                            <span> 30-39英寸电视座装 </span>
+                                        </li>
+                                        <li class="unitPrice">50元<span></span> </li>
+                                        <li><a href="javascript:void(0)" class="sub">-</a><input type="text" name="count" value="1"/><a href="javascript:void(0)" class="add add2">+</a>
+                                            <p></p>
+                                        </li>
+                                        <li class="totalPrice"> </li>
+                                        <li><span class="subSer"></span></li>
+                                    </ul>
+
+
+                                    <ul>
+                                        <li></li>
+                                        <li><img src="img/y4_sec_1_1_6.jpg" alt="" width="60px" height="60px"/></li>
+                                        <li>
+                                            <a href="javascript:void(0)"> 电视挂装服务 </a>
+                                            <span> 30-39英寸电视挂装（含电视挂架） </span>
+                                        </li>
+                                        <li class="unitPrice">100元<span></span> </li>
+                                        <li><a href="javascript:void(0)" class="sub">-</a><input type="text" name="count" value="1"/><a href="javascript:void(0)" class="add add2">+</a>
+                                            <p></p>
+                                        </li>
+                                        <li class="totalPrice"> </li>
+                                        <li><span class="subSer"></span></li>
+                                    </ul>
+
+                                </li>
+                                <li class="minSer"><i></i>影视会员年卡 299元 <span> ( 省 199元 )</span><a href="javascript:void(0)">了解会员服务 ></a></li>
+                                <li class="minSer"><i></i>电视座装服务 50元<span></span><a href="javascript:void(0)">了解安装服务 ></a></li>
+                                <li class="minSer"><i></i>电视挂装服务 100元<span></span><a href="javascript:void(0)">了解安装服务 ></a></li>
+                            </ol>
+                            <div class="servCov" >
+                                <span class="close"></span>
+                                <h2>购买服务</h2>
+                                <dl>
+                                    <dt></dt>
+                                    <dd><a href="javascript:void(0)"><img src="img/y4_sec_1_1_4.jpg" alt="" width="60px" height="60px"></a></dd>
+                                    <dd>
+                                        <span> 影视会员年卡 </span>
+                                        <span> 小米影视会员年卡 </span>
+                                    </dd>
+                                    <dd>  299元<span> ( 省 199元 )</span></dd>
+                                </dl>
+                                <div class="butn">确认购买</div>
+                            </div>
+                            <div class="servCov" >
+                                <span class="close"></span>
+                                <h2>购买服务</h2>
+                                <dl>
+                                    <dt></dt>
+                                    <dd><a href="javascript:void(0)"><img src="img/y4_sec_1_1_5.jpg" alt="" width="60px" height="60px"></a></dd>
+                                    <dd>
+                                        <span>  电视座装服务  </span>
+                                        <span>  30-39英寸电视座装  </span>
+                                    </dd>
+                                    <dd>  50元<span> </span></dd>
+                                </dl>
+                                <div class="butn">确认购买</div>
+                            </div>
+                            <div class="servCov" >
+                                <span class="close"></span>
+                                <h2>购买服务</h2>
+                                <dl>
+                                    <dt></dt>
+                                    <dd><a href="javascript:void(0)"><img src="img/y4_sec_1_1_6.jpg" alt="" width="60px" height="60px"></a></dd>
+                                    <dd>
+                                        <span>  电视挂装服务  </span>
+                                        <span>  30-39英寸电视挂装（含电视挂架）  </span>
+                                    </dd>
+                                    <dd>  100元<span> </span></dd>
+                                </dl>
+                                <div class="butn">确认购买</div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+                <div class="y4_sec_2">
+                    <div>
+                        <div class="y4_sec_2_1">
+                            <a href="javascript:void(0)">继续购物</a>
+                            <span>共<i id="countAllGoods"> </i>件商品，已选择<i id="countChooseGoods"> </i>件</span>
+                        </div>
+                        <div class="y4_sec_2_2">
+                            <span>合计 ： <i id="allTotalPrice"> </i>元</span><a href="javascript:void(0)" id="goToPay">去结算</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="y3_sec_2">
+                    <div class="y3_sec_2_1">
+                        <p><span>买购物车中商品的人还买了</span></p>
+                        <div>
+                            <ul id="y3_sec_2_1_3">
+                                <li>
+                                    <dl>
+                                        <dt><img src="img/y3_sec_2_1_2.jpg"/></dt>
+                                        <dd> 红米6A 全网通版 2GB内存 16GB </dd>
+                                        <dd>599元</dd>
+                                        <dd>
+                                            1049人好评
+                                            <a href="javascript:void(0)" class="addShoppingCar">加入购物车<span class="p_id">7</span></a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt><img src="img/y3_sec_2_1_3.jpg"/></dt>
+                                        <dd> 红米6 全网通版 3GB内存 32GB </dd>
+                                        <dd>769元</dd>
+                                        <dd>
+                                            1795人好评
+                                            <a href="javascript:void(0)" class="addShoppingCar">加入购物车<span class="p_id">8</span></a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt><img src="img/y3_sec_2_1_4.jpg"/></dt>
+                                        <dd> 小米电视4C 32英寸 </dd>
+                                        <dd>899元</dd>
+                                        <dd>
+                                            663人好评
+                                            <a href="javascript:void(0)" class="addShoppingCar">加入购物车<span class="p_id">9</span></a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt><img src="img/y3_sec_2_1_5.jpg"/></dt>
+                                        <dd> 小米电视4A 32英寸体育版 </dd>
+                                        <dd>899元</dd>
+                                        <dd>
+                                            1127人好评
+                                            <a href="javascript:void(0)" class="addShoppingCar">加入购物车<span class="p_id">10</span></a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt><img src="img/y3_sec_2_1_6.jpg"/></dt>
+                                        <dd> 小米电视4A 40英寸 </dd>
+                                        <dd>1299元</dd>
+                                        <dd>
+                                            1384人好评
+                                            <a href="javascript:void(0)" class="addShoppingCar">加入购物车<span class="p_id">11</span></a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt><img src="img/y3_sec_2_1_7.jpg" width="140px" height="140px"/></dt>
+                                        <dd> 小米电视4A 43英寸青春版 </dd>
+                                        <dd>1499元</dd>
+                                        <dd>
+                                            1024人好评
+                                            <a href="javascript:void(0)" class="addShoppingCar">加入购物车<span class="p_id">12</span></a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt><img src="img/y3_sec_2_1_8.jpg"/></dt>
+                                        <dd> 小米电视4S 32英寸 </dd>
+                                        <dd>1099元</dd>
+                                        <dd>
+                                            179人好评
+                                            <a href="javascript:void(0)" class="addShoppingCar">加入购物车<span class="p_id">13</span></a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt><img src="img/y3_sec_2_1_9.jpg"/></dt>
+                                        <dd> 小米电视4C 50英寸 </dd>
+                                        <dd>1999元</dd>
+                                        <dd>
+                                            1502人好评
+                                            <a href="javascript:void(0)" class="addShoppingCar">加入购物车<span class="p_id">14</span></a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt><img src="img/y3_sec_2_1_10.png"/></dt>
+                                        <dd> 小米电视4A 55英寸 </dd>
+                                        <dd>2399元</dd>
+                                        <dd>
+                                            1.5万人好评
+                                            <a href="javascript:void(0)" class="addShoppingCar">加入购物车<span class="p_id">15</span></a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt><img src="img/y3_sec_2_1_11.jpg"/></dt>
+                                        <dd> 小米3L软壳风衣 男款 </dd>
+                                        <dd>129元</dd>
+                                        <dd>
+                                            1686人好评
+                                            <a href="javascript:void(0)" class="addShoppingCar">加入购物车<span class="p_id">16</span></a>
+                                        </dd>
+                                    </dl>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div id="y3_sec_2_1_1">
+							<span>
+								<span ></span>
+							</span>
+                            <span>
+								<span class="span_click"></span>
+							</span>
+                        </div>
+                    </div>
+                </div>
+			</div>
+        </section>
+        <footer>
+            <div class="y_third_root">
+                <div class="y_third_1">
+                    <div class="y_third_1_1">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)">预约维修服务</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">7天无理由退货</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">15天免费换货</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">满150元包邮</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">520余家售后网点</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="y_third_1_2">
+                        <ul>
+                            <li>帮助中心</li>
+                            <li>
+                                <a href="javascript:void(0)">账户管理</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">购物指南</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">订单操作</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>服务支持</li>
+                            <li>
+                                <a href="javascript:void(0)">售后政策</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">自助服务</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">相关下载</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>线下门店</li>
+                            <li>
+                                <a href="javascript:void(0)">小米之家</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">服务网点</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">授权体验店</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>关于小米</li>
+                            <li>
+                                <a href="javascript:void(0)">了解小米</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">加入小米</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">投资者关系</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>关注我们</li>
+                            <li>
+                                <a href="javascript:void(0)">新浪微博</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">官方微信</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">联系我们</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>特色服务</li>
+                            <li>
+                                <a href="javascript:void(0)">F 码通道</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">礼物码</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">防伪查询</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>400-100-5678</li>
+                            <li>周一至周日 8:00-18:00</li>
+                            <li>（仅收市话费）</li>
+                            <li>
+                                <a href="javascript:void(0)">联系客服</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="y_third_2">
+                    <div class="y_third_2_1">
+                        <div><img src="" /></div>
+                        <div>
+                            <a href="javascript:void(0)">小米商城</a>
+                            <span>|</span>
+                            <a href="javascript:void(0)">MIUI</a>
+                            <span>|</span>
+                            <a href="javascript:void(0)">米家</a>
+                            <span>|</span>
+                            <a href="javascript:void(0)">米聊</a>
+                            <span>|</span>
+                            <a href="javascript:void(0)">多看</a>
+                            <span>|</span>
+                            <a href="javascript:void(0)">游戏</a>
+                            <span>|</span>
+                            <a href="javascript:void(0)">路由器</a>
+                            <span>|</span>
+                            <a href="javascript:void(0)">米粉卡</a>
+                            <span>|</span>
+                            <a href="javascript:void(0)">政企服务</a>
+                            <span>|</span>
+                            <a href="javascript:void(0)">小米天猫店</a>
+                            <span>|</span>
+                            <a href="javascript:void(0)">隐私政策</a>
+                            <span>|</span>
+                            <a href="javascript:void(0)">问题反馈</a>
+                            <span>|</span>
+                            <a href="javascript:void(0)">廉正举报</a>
+                            <span>|</span>
+                            <a href="javascript:void(0)">Select Region</a>
+                            <p>
+                                &copy;
+                                <a href="javascript:void(0)">mi.com</a>
+                                京ICP证110507号
+                                <a href="javascript:void(0)">京ICP备10046444号</a>
+                                <a href="javascript:void(0)">京公网安备11010802020134号 </a>
+                                <a href="javascript:void(0)">京网文[2017]1530-131号</a>
+                            </p>
+                            <p> 违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+                        </div>
+                        <div>
+                            <a href="javascript:void(0)"><img src="img/y_third_2_1_2.png" alt="" width="83px" height="28px" /></a>
+                            <a href="javascript:void(0)"><img src="img/y_third_2_1_3.png" alt="" /></a>
+                            <a href="javascript:void(0)"><img src="img/y_third_2_1_4.png" alt="" /></a>
+                            <a href="javascript:void(0)"><img src="img/y_third_2_1_5.png" alt="" /></a>
+                            <a href="javascript:void(0)"><img src="img/y_third_2_1_6.png" alt="" /></a>
+                        </div>
+                    </div>
+                    <div class="y_third_2_2"></div>
+                </div>
+            </div>
+        </footer>
+        <div id="cover"></div>
+        <div id="maxCount">
+            <span class="close"></span>
+            <p>商品超过最大购买限制 [3091008]</p>
+            <div class="butn">确定</div>
+        </div>
+
+
+    </body>
+
+</html>

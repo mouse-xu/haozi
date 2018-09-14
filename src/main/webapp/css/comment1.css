@@ -1,0 +1,193 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: #757575;
+}
+body{
+	font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    background-color: white;
+}
+.M_ping{
+	width: 978px;
+	float: left;
+    margin-left: 14px;
+    min-height: 1px;
+    background-color: white;
+}
+section:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.M_pja{
+	padding: 36px 0px;
+	/*background: #fff;*/
+}
+.M_pja_1{
+	margin: 0 48px;
+}
+.M_box-hd h1{
+	margin: 0;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 68px;
+    color: #757575;
+}
+.M_more{
+	border-bottom: 1px solid #e0e0e0;
+}
+.M_more:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.M_more ul{
+	float: left;
+    margin: 0;
+    padding: 18px 0;
+    font-size: 16px;
+    line-height: 1.25;
+}
+.M_more:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.M_more .first{
+	float: left;
+    padding: 0 20px;
+    padding-left: 0;
+    border-left: 0;
+}
+.M_more ul:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.M_more li:not(:first-child){
+	float: left;
+    padding: 0 20px;
+    border-left: 1px solid #e0e0e0;
+    color: #757575;
+}
+.M_box-bd p{
+	margin: 40px 0;
+    font-size: 18px;
+    text-align: center;
+    color: #b0b0b0;
+}
+/*
+已评价商品*/
+.M_xmpj{
+	width: 868px;
+}
+.M_xmpj:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.M_xmpj .MM_j{
+	width: 200px;
+    margin: 0 auto 10px;
+}
+.M_xmpj ul{
+	width: 930px;
+    margin: 0;
+    padding: 0;
+}
+.M_xmpj ul li{
+	float: left;
+    width: 260px;
+    height: 348px;
+    padding-top: 40px;
+    padding-right: 48px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
+}
+.M_xmpj ul:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.M_xmpj ul li .MM_j{
+	width: 200px;
+    margin: 0 auto 10px;
+}
+.M_xmpj ul h3{
+	color: #333;
+	margin: 0 0 5px;
+    font-size: 14px;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.M_xmpj ul a:hover{
+	color: orangered;
+}
+.M_xmpj ul .M_price{
+	margin: 0 0 10px;
+    color: #ff6700;
+}
+.M_xmpj ul .M_rank{
+	height: 18px;
+    margin: 0 0 8px;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+.M_xmpj ul .M_actions{
+/*	visibility: hidden;*/
+    opacity: 0;
+    /*font-size: 0;*/
+    transition: opacity .2s;
+}
+.M_xmpj ul .M_actions:hover{
+	opacity: 1;
+}
+.M_box-bd1 .M_xmpj ul .M_actions a{
+	width: 108px;
+    margin: 0 7px;
+    font-size: 12px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    transition: all .4s;
+    height: 28px;
+    line-height: 28px;
+    background: #ff6700;
+    color: #fff;
+}
+
+/*评价失效*/
+.M_box-bd2 .M_xmpj ul .M_actions a{
+	width: 108px;
+    margin: 0 7px;
+    font-size: 12px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    transition: all .4s;
+    height: 28px;
+    line-height: 28px;
+    background: #e0e0e0;
+    color: #b0b0b0;
+}
+.M_box-bd .M_xmpj ul .M_actions a{
+	width: 108px;
+    margin: 0 7px;
+    font-size: 12px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    transition: all .4s;
+    height: 28px;
+    line-height: 28px;
+    background: #ff6700;
+    color: #fff;
+}

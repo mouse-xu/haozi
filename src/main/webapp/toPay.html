@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/toPay.css"/>
+		<link rel="stylesheet" href="css/footer.css" />
+		<link rel="stylesheet" href="css/TV_4A_32in_4.css" />
+		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+        <script src="js/jquery.cookie.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/TV.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".M_modal,.M_tab-container,.M_moda2").hide();
+				$(".m_tu2").click(function () {
+					toPay(1);
+                })
+				// $(".m_tu1").click(function(){
+				// 	$(".M_modal").show();
+				// 	$(".m_bg").show();
+				// 	$(".M_modal").css("background-color","");
+				// })
+				// $(".m_tu2,.m_tu3,.m_tu4").click(function(){
+				// 	$(".M_moda2").show();
+				// 	$(".m_bg").show();
+				// })
+				// $(".M_cha").click(function(){
+				// 	$(".M_modal").hide();
+				// 	$(".M_moda2").hide();
+				// 	$(".m_bg").hide();
+				// })
+				// $(".m_fen").click(function(){
+				// 	$(".M_tab-container").show();
+				// 	$(".m_fen").css({"margin-bottom":"0","height":"74px","background-color":"#fff","border-bottom-color":"#fff"})
+				// })
+			})
+			
+		</script>
+	</head>
+
+	<body>
+	<div class="y4_first_root">
+		<div class="y4_first_1">
+			<div class="y4_first_1_1">
+				<div>
+					<ul>
+						<li>
+							<a href="k_file.html"><img src="img/y4_first_1_1_2.png" /></a>
+						</li>
+						<li><img src="img/y4_first_1_1_1.png" /></li>
+					</ul>
+				</div>
+				<p>我的购物车<span>温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</span></p>
+			</div>
+			<div class="y4_first_1_2">
+				<div>
+					<a href="x_login.html" class="loginBefore">登录</a>
+					<div id="changeState">
+						<p></p>
+						<ul>
+							<li><a href="peopleCenter.html">个人中心</a></li>
+							<li>评价晒单</li>
+							<li>我的喜欢</li>
+							<li>小米账户</li>
+							<li id="loginOut">退出登陆</li>
+						</ul>
+					</div>
+				</div>
+				<span>|</span>
+				<p class="loginBefore" onclick="register()">注册</p>
+				<p class="loginAfter">
+					<a href="javascript:(0)">我的订单</a>
+				</p>
+			</div>
+		</div>
+	</div>
+		<section>
+			<div class="M_page-main">
+				<div class="M_container">
+					<form target="_blank" method="post">
+						
+
+						<div class="M_section">
+							<div class="M_cash">
+								选择以下支付方式付款
+							</div>
+
+							<div class="M_payment-box ">
+								<div class="M_payment-header">
+									<h3>支付平台</h3>
+								</div>
+								<div class="M_payment-body">
+									<ul>
+										<li class="m_tu1" >
+											<img src="img/M_weixin.png" style="margin-right: -10px;"></li>
+										<li class="m_tu2">
+											<a href="javascript: void(0);" target="_blank"><img src="img/M_zhifubao.jpg" style="margin-right: -10px;"></a></li>
+										<li class="m_tu3">
+											<a href="javascript: void(0);" target="_blank"><img src="img/M_zaixian.png" style="margin-right: -10px;"></a></li>
+										<li class="m_tu4">	
+											<a href="javascript: void(0);" target="_blank"><img src="img/M_xmqbao.jpg"style="margin-right: -10px;"></a></li>
+									</ul>
+									<div class="M_event">
+										<p>支 付 宝：支付宝扫码支付，赢1999元红包</p>
+										<p>小米分期：下单支付满30元立减20元（限1单）</p>
+										<p>小米钱包：绑定新卡支付，享最高立减99元</p>
+										<a href="javascript: void(0);" target="_blank">了解更多&gt;</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="M_payment-box ">
+								<div class="M_payment-header">
+									<h3>银行借记卡及信用卡</h3>
+								</div>
+								<div class="M_payment-body">
+									<ul>
+										<li>
+											<img src="img/mz.png" ></li>
+										<li>	
+											<img src="img/mzg.png" ></li>
+										<li>	
+											<img src="img/mjs.png" ></li>
+										<li>	
+											<img src="img/mjt.png" ></li>
+										<li>	
+											<img src="img/mny.png" ></li>
+										<li>	
+											<img src="img/mzy.png" ></li>
+										<li>	
+											<img src="img/myz.png" ></li>
+										<li>	
+											<img src="img/mgf.png" ></li>
+										<li>
+											<img src="img/mpf.png" ></li>
+										<li>	
+											<img src="img/mank.png" ></li>
+										<li>	
+											<img src="img/mxy.png" ></li>
+										<li>	
+											<img src="img/mms.png" ></li>
+										<li>	
+											<img src="img/mzx.png" ></li>
+										<li>
+											<img src="img/msh.png" ></li>
+										<li>	
+											<img src="img/mbj.png" ></li>
+										<li>	
+											<img src="img/mnb.png" ></li>
+										<li>	
+											<img src="img/mhz.png" ></li>
+										<li>	
+											<img src="img/mns.png" ></li>
+										<li>	
+											<img src="img/mfz.png" ></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="M_payment-box">
+								<div class="M_payment-header">
+									<h3>快捷支付</h3>
+									<span>（支持以下各银行信用卡以及部分银行借记卡）</span>
+								</div>
+								<div class="M_payment-body">
+									<ul>
+										<li>	
+											<img src="img/mz.png" ></li>
+										<li>	
+											<img src="img/mjt.png" ></li>
+										<li>	
+											<img src="img/mjs.png" ></li>
+										<li>	
+											<img src="img/mzg.png" ></li>
+										<li>	
+											<img src="img/mzx.png" ></li>
+										<li>	
+											<img src="img/mank.png" ></li>
+										<li>	
+											<img src="img/mzy.png" ></li>
+										<li>	
+											<img src="img/msh.png" ></li>
+										<li>	
+											<img src="img/mjsyh.png" ></li>
+										<li>	
+											<img src="img/mxy.png" ></li>
+										<li>	
+											<img src="img/mny.png" ></li>
+										<li>	
+											<img src="img/mpa.png" ></li>
+										<li>	
+											<img src="img/mhx.png" ></li>
+										<li>
+											<img src="img/mgf.png" ></li>
+										<li>	
+											<img src="img/mbj.png" ></li>
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="M_section">
+							<div class="M_payment-box">
+								<div class="M_payment-header">
+									<h3>分期付款</h3>
+								</div>
+								<div class="M_payment-body">
+									<ul>
+										<li class="m_fen">
+											<img src="img/M_fenqi.png">
+										</li>
+									</ul>
+									<div class="M_tab-container">
+										<div class="M_tab-content">
+											<div class="M_isinstalment-item">
+												<div class="M_item-header">
+													<h3>38.9元 × 1期</h3>
+													<p>
+														<span>免息，无手续费</span>
+													</p>
+												</div>
+												<br>
+												<div class="M_item-footer">
+													<a href="javascript:void(0);">选择该分期方式</a>
+												</div>
+											</div>
+
+											<div class="M_isinstalment-desc">
+												分期付款说明：<br> 每期还款金额是根据你的订单估算得出的金额，实际支付数额请以小米分期账单为准，小米分期有权决定是否接受您的分期付款申请。
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<!--微信支付弹框-->
+				
+				<div class="M_modal">
+					<div class="M_modal-hd">
+						<span>微信支付</span>
+						<a href="javascript: void(0);" class="M_cha"><img src="img/M_cha.png"></a>
+					</div>
+					<div class="M_modal-bd">
+						<div class="M_code"><img src="img/M_wxget.png"></div>
+						<div class="M_msg">
+							请使用 <span>微信</span> 扫一扫<br>二维码完成支付
+						</div>
+					</div>
+				</div>
+				<!--支付提示框-->
+				<div class="m_bg"></div>
+				<div class="M_moda2">
+				    <div class="M_modal-header">
+				        <h3>正在支付...</h3>
+				        <a class="M_cha" href="javascript: void(0);"><img src="img/M_cha.png"/></a>
+				    </div>
+				    <div class="M_modal-body">
+				        <div class="M_success">
+				            <h4>支付成功了</h4>
+				            <p><a href="javascript: void(0);">立即查看订单详情 &gt;</a></p>
+				        </div>
+				        <div class="M_fail">
+				            <h4>如果支付失败</h4>
+				            <p><a href="javascript: void(0);" target="_blank">查看支付常见问题 &gt;</a></p>
+				        </div>
+				    </div>
+				</div>
+				
+			</div>
+		</section>
+	<footer>
+		<div class="y_third_root">
+			<div class="y_third_1">
+				<div class="y_third_1_1">
+					<ul>
+						<li>
+							<a href="javascript:void(0)">预约维修服务</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">7天无理由退货</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">15天免费换货</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">满150元包邮</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">520余家售后网点</a>
+						</li>
+					</ul>
+				</div>
+				<div class="y_third_1_2">
+					<ul>
+						<li>帮助中心</li>
+						<li>
+							<a href="javascript:void(0)">账户管理</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">购物指南</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">订单操作</a>
+						</li>
+					</ul>
+					<ul>
+						<li>服务支持</li>
+						<li>
+							<a href="javascript:void(0)">售后政策</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">自助服务</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">相关下载</a>
+						</li>
+					</ul>
+					<ul>
+						<li>线下门店</li>
+						<li>
+							<a href="javascript:void(0)">小米之家</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">服务网点</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">授权体验店</a>
+						</li>
+					</ul>
+					<ul>
+						<li>关于小米</li>
+						<li>
+							<a href="javascript:void(0)">了解小米</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">加入小米</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">投资者关系</a>
+						</li>
+					</ul>
+					<ul>
+						<li>关注我们</li>
+						<li>
+							<a href="javascript:void(0)">新浪微博</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">官方微信</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">联系我们</a>
+						</li>
+					</ul>
+					<ul>
+						<li>特色服务</li>
+						<li>
+							<a href="javascript:void(0)">F 码通道</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">礼物码</a>
+						</li>
+						<li>
+							<a href="javascript:void(0)">防伪查询</a>
+						</li>
+					</ul>
+					<ul>
+						<li>400-100-5678</li>
+						<li>周一至周日 8:00-18:00</li>
+						<li>（仅收市话费）</li>
+						<li>
+							<a href="javascript:void(0)">联系客服</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="y_third_2">
+				<div class="y_third_2_1">
+					<div><img src="" /></div>
+					<div>
+						<a href="javascript:void(0)">小米商城</a>
+						<span>|</span>
+						<a href="javascript:void(0)">MIUI</a>
+						<span>|</span>
+						<a href="javascript:void(0)">米家</a>
+						<span>|</span>
+						<a href="javascript:void(0)">米聊</a>
+						<span>|</span>
+						<a href="javascript:void(0)">多看</a>
+						<span>|</span>
+						<a href="javascript:void(0)">游戏</a>
+						<span>|</span>
+						<a href="javascript:void(0)">路由器</a>
+						<span>|</span>
+						<a href="javascript:void(0)">米粉卡</a>
+						<span>|</span>
+						<a href="javascript:void(0)">政企服务</a>
+						<span>|</span>
+						<a href="javascript:void(0)">小米天猫店</a>
+						<span>|</span>
+						<a href="javascript:void(0)">隐私政策</a>
+						<span>|</span>
+						<a href="javascript:void(0)">问题反馈</a>
+						<span>|</span>
+						<a href="javascript:void(0)">廉正举报</a>
+						<span>|</span>
+						<a href="javascript:void(0)">Select Region</a>
+						<p>
+							&copy;
+							<a href="javascript:void(0)">mi.com</a>
+							京ICP证110507号
+							<a href="javascript:void(0)">京ICP备10046444号</a>
+							<a href="javascript:void(0)">京公网安备11010802020134号 </a>
+							<a href="javascript:void(0)">京网文[2017]1530-131号</a>
+						</p>
+						<p> 违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+					</div>
+					<div>
+						<a href="javascript:void(0)"><img src="img/y_third_2_1_2.png" alt="" width="83px" height="28px" /></a>
+						<a href="javascript:void(0)"><img src="img/y_third_2_1_3.png" alt="" /></a>
+						<a href="javascript:void(0)"><img src="img/y_third_2_1_4.png" alt="" /></a>
+						<a href="javascript:void(0)"><img src="img/y_third_2_1_5.png" alt="" /></a>
+						<a href="javascript:void(0)"><img src="img/y_third_2_1_6.png" alt="" /></a>
+					</div>
+				</div>
+				<div class="y_third_2_2"></div>
+			</div>
+		</div>
+	</footer>
+	</body>
+
+</html>

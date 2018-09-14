@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript"></script>
+		<script src="js/TV.js" type="text/javascript"></script>
+        <style>
+            *{
+            margin: 0px;
+            padding: 0px;
+            }
+            a{
+            text-decoration: none;
+            }
+            ol{
+            list-style: none;
+            }
+            body{
+            font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+            }
+            .m_head{
+            width: 978px;
+            /*float: left;*/
+                margin: 0 auto;
+            /*margin-left: 14px;*/
+            min-height: 1px;
+            }
+
+            .m_uc-box{
+            padding: 36px 0;
+            background: #fff;
+            }
+            .m_conbox{
+            margin: 0 48px;
+            }
+            .m_box-hd h1{
+            margin: 0;
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 68px;
+            color: #757575;
+            }
+            .m_box-hd small{
+            margin-left: 10px;
+            font-size: 12px;
+            line-height: 1.5;
+            }
+            .m_box-hd a{
+            color: #757575;
+            }
+            .m_box-hd small a:hover{
+            text-decoration: underline;
+            }
+            .m_more{
+            border-bottom: 1px solid #e0e0e0;
+            }
+            .m_more:after{
+            content: '';
+            display: block;
+            clear: both;
+            }
+            .m_more h2{
+            float: left;
+            padding: 24px 0 20px;
+            font-size: 18px;
+            font-weight: 400;
+            color: #333;
+            }
+            .m_order{
+            position: relative;
+            }
+            .m_detail{
+            padding: 25px 0;
+            margin-bottom: 5px;
+            }
+            .m_status{
+            margin-bottom: 25px;
+            color: #b0b0b0;
+            font-size: 18px;
+            }
+            .m_progress{
+            height: 65px;
+            margin-bottom: 15px;
+            }
+            .m_progress ol{
+            width: 880px;
+            height: 20px;
+            margin: 0 auto;
+            padding: 0;
+            list-style-type: none;
+            border-radius: 20px;
+            font-size: 12px;
+            line-height: 20px;
+            text-align: center;
+            color: #424242;
+            background-color: #eee;
+            }
+            .m_progress ol .m_first{
+            background-color: #83c44e;
+            color: #fff;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            background-color: #83c44e;
+            color: #fff;
+            float: left;
+            width: 176px;
+            height: 20px;
+            }
+            .m_progress ol span{
+            color: #fff;
+            }
+            .m_progress .m_info{
+            margin-top: 15px;
+            color: #757575;
+            }
+            .m_progress ol .m_done{
+            background-color: #83c44e;
+            color: #fff;
+            float: left;
+            width: 176px;
+            height: 20px;
+            }
+            .m_progress ol .m_active{
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-color: #83c44e;
+            color: #fff;
+            float: left;
+            width: 176px;
+            height: 20px;
+            }
+            .m_deli{
+            display: block;
+            border: none;
+            margin-bottom: 0;
+            padding: 0 20px 12px;
+            margin: 15px 0 20px;
+            font-size: 12px;
+            color: #757575;
+            }
+            .m_deli p{
+            line-height: 30px;
+            border-bottom: 1px solid #cfeeab;
+            }
+            .m_deli a{
+            color: #757575;
+            }
+            .m_deli a:hover{
+            color: orangered;
+            }
+
+            .m_tupi{
+            width: 842px;
+            margin-left: 20px;
+            border-collapse: collapse;
+            border-spacing: 0;
+            }
+            .m_tupi td{
+            height: 90px;
+            border-bottom: 1px solid #e0e0e0;
+            text-align: left;
+            color: #333;
+            }
+            .m_tupi .m_thumb{
+            width: 100px;
+            }
+            .m_tupi .m_figure{
+            width: 80px;
+            }
+            .m_name{
+            width: 290px;
+            }
+            .m_name p a{
+            color: #333;
+            }
+            .m_name a:hover{
+            color: orangered;
+            }
+            .m_minfo{
+            position: relative;
+            height: auto;
+            min-height: 120px;
+            padding: 6px 0 12px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e0e0e0;
+            color: #757575;
+            }
+            .m_minfo h3{
+            margin: 0 0 15px;
+            font-size: 18px;
+            font-weight: 400;
+            color: #333;
+            }
+            .m_mtable th{
+            width: 80px;
+            font-weight: 400;
+            padding: 3px 0;
+            text-align: left;
+            }
+            .m_mtable td{
+            padding: 3px 0;
+            text-align: left;
+            }
+            .m_tole{
+            width: 255px;
+            margin: 0 0 0 auto;
+            color: #757575;
+            }
+            .m_tole th{
+            width: 100px;
+            font-weight: 400;
+            text-align: right;
+            padding: 5px 0;
+            }
+            .m_tole td{
+            text-align: right;
+            color: #ff6700;
+            padding: 5px 0;
+            }
+            .m_tole .m_total{
+            padding-top: 25px;
+            vertical-align: text-bottom;
+            }
+            .m_tole .m_total span{
+            font-size: 30px;
+            font-weight: 200;
+            line-height: 1;
+            }
+            section{
+                margin: 0 auto;
+                width: 1226px;
+            }
+            .price{
+                text-align: center;
+            }
+			.m_status:after{
+				content: '';
+				display: block;
+				clear: both;
+			}
+            .m_status p{
+                display: inline-block;
+                cursor: pointer;
+                height: 30px;
+                width: 120px;
+                line-height: 30px;
+                font-size: 14px;
+                text-align: center;
+                margin-left: 5px;
+                float: right;
+            }
+            .m_status #payNow{
+                height: 32px;
+                background-color: #FF6700;
+                color: #ffffff;
+            }
+            .m_status #payNow:hover{
+                background-color: #F25807;
+                color: #ffffff;
+            }
+            .m_status #cancel{
+                border: 1px #b0b0b0 solid;
+            }
+            .m_status #cancel:hover{
+                color: #ffffff;
+                background: #757575;
+            }
+
+        </style>
+	</head>
+
+	<body>
+		<header></header>
+		<section>
+			<div class="m_head">
+				<div class="m_uc-box">
+					<div class="m_conbox">
+						<div class="m_box-hd">
+							<h1>订单详情<small>请谨防钓鱼链接或诈骗电话，<a href="javascript: void(0);" target="_blank" >了解更多&gt;</a></small></h1>
+							<div class="m_more">
+								<h2>订单号：
+									<span class="o_id">5160901773406977 </span>
+                    			</h2>
+							</div>
+						</div>
+						<div class="m_box-bd">
+							<div class="m_order">
+								<div class="m_detail">
+									<div class="m_summary">
+										<div class="m_status">
+											已收货
+                                            <p>立即付款</p>
+                                            <p>取消订单</p>
+										</div>
+
+										<div class="m_progress">
+											<ol>
+												<li class="m_first">
+													<div><span>下单</span></div>
+													<div class="m_info orderCreatTime" >2016年09月01日 20:47</div>
+												</li>
+												<li class="m_done">
+													<div><span>付款</span></div>
+													<div class="m_info orderPayTime" >2016年09月01日 20:48</div>
+												</li>
+												<li class="m_done">
+													<div><span>配货</span></div>
+													<div class="m_info orderPayTime">2016年09月01日 20:50</div>
+												</li>
+												<li class="m_done">
+													<div><span>出库</span></div>
+													<div class="m_info orderPayTime">2016年09月02日 17:37</div>
+												</li>
+												<li class="m_active">
+													<div><span>交易成功</span></div>
+													<div class="m_info orderFinishTime">2016年09月03日 19:28</div>
+												</li>
+											</ol>
+										</div>
+
+										<div class="m_deli" >
+											<p>
+												物流公司：
+												<a href="javascript: void(0);" target="_blank" >韵达快运(南京)</a>
+												&nbsp; &nbsp;运单号：3101107348280
+											</p>
+										</div>
+									</div>
+									
+									<table class="m_tupi">
+										<tbody>
+											<tr style="display: none;">
+												<td class="m_thumb">
+													<div class="m_figure">
+														<a target="_blank" href="javascript: void(0);" >
+															<img src="img/mmjj.jpg">
+														</a>
+													</div>
+												</td>
+												<td  class="m_name">
+													<p>
+														<a target="_blank" href="javascript: void(0);">小米路由器3 白色</a>
+													</p>
+												</td>
+												<td>
+													<p>149元 × 1</p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<div class="m_minfo">
+
+									<h3>收货信息</h3>
+									<table class="m_mtable">
+										<tbody>
+											<tr>
+												<th>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</th>
+												<td id="receiverName">徐浩然</td>
+											</tr>
+											<tr>
+												<th>联系电话：</th>
+												<td id="receiverPhone">187****9543</td>
+											</tr>
+											<tr>
+												<th>收货地址：</th>
+												<td id="receiverAddress">安徽 滁州市 明光市 开发区星光华景</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<div class="m_minfo">
+									<h3>支付方式</h3>
+									<table class="m_mtable">
+										<tbody>
+											<tr>
+												<th>支付方式：</th>
+												<td>在线支付</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div>
+									<table class="m_tole">
+
+										<tbody>
+											<tr>
+												<th>商品总价：</th>
+												<td><span class="m_num orderPrice">336</span>元</td>
+											</tr>
+											<tr>
+												<th>运费：</th>
+												<td><span class="m_num">0</span>元</td>
+											</tr>
+											<tr>
+												<th class="m_total">实付金额：</th>
+												<td class="m_total"><span class="orderPrice">336</span>元</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer></footer>
+    <script>
+        $(function () {
+            var o_idStr = $.cookie("cookie_o_id");
+            var ele = $(".m_head").get(0);
+            showorderdetail(o_idStr,ele);
+            $(".m_head").delegate("#payNow","click",function () {
+                var price = $(".m_total .orderPrice").text();
+                var o_idStr = $(".o_id").text();
+                 $.cookie("WIDout_trade_no",o_idStr);
+                 $.cookie("WIDtotal_amount",price);
+                 toPay(1);
+            })
+            $(".m_head").delegate("#cancel","click",function () {
+                var o_idStr = $(".o_id").text();
+                cancelOrder(o_idStr);
+            })
+
+
+        })
+    </script>
+	</body>
+
+</html>

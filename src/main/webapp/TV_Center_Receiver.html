@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TV_Center_Receiver</title>
+    <link rel="stylesheet" href="css/TV_4A_32in_5.css"/>
+    <link rel="stylesheet" href="css/TV_4A_32in_4.css"/>
+    <script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="js/TV.js" type="text/javascript" charset="utf-8"></script>
+    <style>
+        .y5_sec_1{
+            width: 978px;
+            margin: 0px;
+        }
+        html,body{
+            background-color: #f5f5f5;
+        }
+    </style>
+    <script>
+        $(function () {
+            queryAllReceiver();
+        })
+
+    </script>
+</head>
+<body>
+    <div class="y5_sec_1">
+        <p>收货地址<span>大型商品下单后，收货地址将无法修改。<i>快递公司会电话联系您确认送货时间，收货时需核对身份证信息。</i></span></p>
+
+        <div class="y5_sec_1_1">
+
+            <ul id="addAddress">
+                <li id="addAddressBtn">添加新地址</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // $(function () {
+        //     window.resize = function(){
+        //         var height = $(document.body).height();
+        //         console.log("2:"+ height );
+        //         $(parent.document.getElementById('iframepage')).height(height+"px")
+        //         // parent.document.getElementById('iframepage').style.height = 900 + 'px'
+        //     }
+        // })
+        // 计算页面的实际高度，iframe自适应会用到
+        // function calcPageHeight(doc) {
+        //     var cHeight = Math.max(doc.body.clientHeight, doc.documentElement.clientHeight)
+        //     var sHeight = Math.max(doc.body.scrollHeight, doc.documentElement.scrollHeight)
+        //     var height  = Math.max(cHeight, sHeight)
+        //     return height
+        // }
+        // window.onload = function() {
+        //
+        //
+        // }
+    </script>
+</body>
+</html>

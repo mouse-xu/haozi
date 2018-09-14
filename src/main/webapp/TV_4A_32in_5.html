@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TV_4A_32in_5</title>
+    <link rel="stylesheet" href="css/footer.css"/>
+    <link rel="stylesheet" href="css/TV_4A_32in_4.css"/>
+    <link rel="stylesheet" href="css/TV_4A_32in_5.css"/>
+    <script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="js/TV.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        //加载页面的时候就加载已经设置的地址
+        $(function () {
+            queryAllReceiver();
+        })
+    </script>
+
+</head>
+<body>
+<header>
+    <div class="y4_first_root">
+        <div class="y4_first_1">
+            <div class="y4_first_1_1">
+                <div>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)"><img src="img/y4_first_1_1_2.png"/></a>
+                        </li>
+                        <li><img src="img/y4_first_1_1_1.png"/></li>
+                    </ul>
+                </div>
+                <p>我的购物车<span>温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</span></p>
+            </div>
+            <div class="y4_first_1_2">
+                <div>
+                    <a href="x_login.html" class="loginBefore">登录</a>
+                    <div id="changeState">
+                        <p></p>
+                        <ul>
+                            <li><a href="peopleCenter.html">个人中心</a></li>
+                            <li>评价晒单</li>
+                            <li>我的喜欢</li>
+                            <li>小米账户</li>
+                            <li id="loginOut">退出登陆</li>
+                        </ul>
+                    </div>
+                </div>
+                <span>|</span>
+                <p class="loginBefore">注册</p>
+                <p class="loginAfter">
+                    <a href="javascript:(0)">我的订单</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+<section>
+    <div class="y5_sec_root">
+        <div class="y5_sec_1">
+            <p>收货地址<span>大型商品下单后，收货地址将无法修改。<i>快递公司会电话联系您确认送货时间，收货时需核对身份证信息。</i></span></p>
+
+            <div class="y5_sec_1_1">
+
+                <ul id="addAddress">
+                    <li id="addAddressBtn">添加新地址</li>
+                </ul>
+            </div>
+            <div class="y5_sec_1_2">
+                <p>配送方式<span>包邮</span></p>
+            </div>
+            <div class="y5_sec_1_3 y5_sec_1_2">
+                <p>发票<span>电子发票</span><i>个人</i><i>商品明细</i></p>
+            </div>
+            <div class="y5_sec_1_4">商品及优惠券</div>
+            <div class="y5_sec_1_5">
+                <table id="table">
+                    <tr style="display: none;">
+                        <td><img src="img/y5_sec_1_3.jpg" alt="" width="30px" height="30px"></td>
+                        <td><a href="javascript:void(0)"> 小米电视4A 32英寸 黑色 32英寸 </a></td>
+                        <td>899元x1</td>
+                        <td></td>
+                        <td>899元</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        <div class="y5_sec_2">
+            <div class="y5_sec_2_1">
+                <ul>
+                    <li><p>商品件数：</p><span id="totalCount"></span></li>
+                    <li><p>商品总价：</p><span id="totalPrice"></span></li>
+                    <li><p>活动优惠：</p><span>-0元</span></li>
+                    <li><p>运费：</p><span id="freight"></span></li>
+                    <li><p>应付总额：</p><span><i id="allTotalPrice"></i>元</span></li>
+                </ul>
+            </div>
+            <div class="y5_sec_2_2">
+                <div class="butn">去结算</div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="y_third_root">
+        <div class="y_third_1">
+            <div class="y_third_1_1">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0)">预约维修服务</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">7天无理由退货</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">15天免费换货</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">满150元包邮</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">520余家售后网点</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="y_third_1_2">
+                <ul>
+                    <li>帮助中心</li>
+                    <li>
+                        <a href="javascript:void(0)">账户管理</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">购物指南</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">订单操作</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>服务支持</li>
+                    <li>
+                        <a href="javascript:void(0)">售后政策</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">自助服务</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">相关下载</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>线下门店</li>
+                    <li>
+                        <a href="javascript:void(0)">小米之家</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">服务网点</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">授权体验店</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>关于小米</li>
+                    <li>
+                        <a href="javascript:void(0)">了解小米</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">加入小米</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">投资者关系</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>关注我们</li>
+                    <li>
+                        <a href="javascript:void(0)">新浪微博</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">官方微信</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">联系我们</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>特色服务</li>
+                    <li>
+                        <a href="javascript:void(0)">F 码通道</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">礼物码</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">防伪查询</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>400-100-5678</li>
+                    <li>周一至周日 8:00-18:00</li>
+                    <li>（仅收市话费）</li>
+                    <li>
+                        <a href="javascript:void(0)">联系客服</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="y_third_2">
+            <div class="y_third_2_1">
+                <div><img src=""/></div>
+                <div>
+                    <a href="javascript:void(0)">小米商城</a>
+                    <span>|</span>
+                    <a href="javascript:void(0)">MIUI</a>
+                    <span>|</span>
+                    <a href="javascript:void(0)">米家</a>
+                    <span>|</span>
+                    <a href="javascript:void(0)">米聊</a>
+                    <span>|</span>
+                    <a href="javascript:void(0)">多看</a>
+                    <span>|</span>
+                    <a href="javascript:void(0)">游戏</a>
+                    <span>|</span>
+                    <a href="javascript:void(0)">路由器</a>
+                    <span>|</span>
+                    <a href="javascript:void(0)">米粉卡</a>
+                    <span>|</span>
+                    <a href="javascript:void(0)">政企服务</a>
+                    <span>|</span>
+                    <a href="javascript:void(0)">小米天猫店</a>
+                    <span>|</span>
+                    <a href="javascript:void(0)">隐私政策</a>
+                    <span>|</span>
+                    <a href="javascript:void(0)">问题反馈</a>
+                    <span>|</span>
+                    <a href="javascript:void(0)">廉正举报</a>
+                    <span>|</span>
+                    <a href="javascript:void(0)">Select Region</a>
+                    <p>
+                        &copy;
+                        <a href="javascript:void(0)">mi.com</a>
+                        京ICP证110507号
+                        <a href="javascript:void(0)">京ICP备10046444号</a>
+                        <a href="javascript:void(0)">京公网安备11010802020134号 </a>
+                        <a href="javascript:void(0)">京网文[2017]1530-131号</a>
+                    </p>
+                    <p> 违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+                </div>
+                <div>
+                    <a href="javascript:void(0)"><img src="img/y_third_2_1_2.png" alt="" width="83px"
+                                                      height="28px"/></a>
+                    <a href="javascript:void(0)"><img src="img/y_third_2_1_3.png" alt=""/></a>
+                    <a href="javascript:void(0)"><img src="img/y_third_2_1_4.png" alt=""/></a>
+                    <a href="javascript:void(0)"><img src="img/y_third_2_1_5.png" alt=""/></a>
+                    <a href="javascript:void(0)"><img src="img/y_third_2_1_6.png" alt=""/></a>
+                </div>
+            </div>
+            <div class="y_third_2_2"></div>
+        </div>
+    </div>
+</footer>
+<div id="cover"></div>
+<div id="alertAddressChoose">
+    <span class="close"></span>
+    <p>添加收货地址</p>
+    <ul>
+        <li class="li_add">
+            <p class="p_fl hoverChange">
+                <span class="span_move">姓名</span>
+                <input type="text" name="userName"  id="receiverName">
+            </p>
+            <p class="p_fr hoverChange">
+                <span class="span_move">手机号</span>
+                <input type="text" name="phone" id="receiverPhone">
+            </p>
+        </li>
+        <li>
+            <div id="showChooseAddress" class="hoverChange">
+                <div id="showChooseAddress1">选择省 / 市 / 区</div>
+                <div id="showChoose">
+                    <span class="closeChooseAddress"></span>
+                    <p>
+                        <span id="province" class="areaShow"></span>
+                        <span id="city" class="areaShow"></span>
+                        <span id="district" class="areaShow"></span>
+                        <span id="signSpan" ></span>
+                    </p>
+                    <ol id="showChooseOl">
+
+                    </ol>
+                </div>
+
+            </div>
+
+        </li>
+        <li class="li_add addressDetail">
+            <p class="p_fl hoverChange">
+                <span class="span_move">详细地址</span>
+                <input type="text" name="addressDetail"  id="receiverDetail">
+            </p>
+        </li>
+        <li class="li_add">
+            <p class="p_fl hoverChange">
+                <span class="span_move">邮政编码</span>
+                <input type="text" name="postCode"  id="postcode">
+            </p>
+            <p class="p_fr hoverChange">
+                <span class="span_move">地址标签</span>
+                <input type="text" name="addressLabble" id="receiverAddressNickName">
+            </p>
+        </li>
+    </ul>
+    <div>
+        <div id="exceptionSign"></div>
+        <div class="butn" id="saveAddress">保存</div>
+        <div class="butn cancel">取消</div>
+    </div>
+</div>
+</body>
+</html>

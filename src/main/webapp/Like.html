@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/Like.css"/>
+		<script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript"></script>
+		<script>
+			$(function(){
+                queryCollection();
+                console.log(12)
+			})
+            function queryCollection() {
+                // console.log(34)
+                $.ajax({
+                    url: "/product/queryCollection.do",
+                    type: "post",
+                    data: {
+                        userName: $.cookie("cookie_userName")
+                    },
+                    dataType: "json",
+                    success:function(data){
+                        // console.log(data);
+                        if (data!="") {
+                            $.each(data, function (i, v) {
+                                var li =
+                                    "<li>" +
+                                    "<div>" +
+                                    "<a href='javascript:void(0)' target='_blank' >" +
+                                    "<img src='" + (v.p_file_name ? v.p_file_name : '') + "'>" +
+                                    "</a>" +
+                                    "</div>" +
+                                    "<h3>" +
+                                    "<a href='javascript:void(0)' target='_blank' >" + (v.p_name ? v.p_name : '') + "</a>" +
+                                    "</h3>" +
+                                    "<p class='M_price'>" +
+                                    (v.shop_price ? v.shop_price : '') + "元<del class='del'>" + (v.market_price ? v.market_price : '') + "元</del>" +
+                                    "</p>" +
+                                    "<div class='M_xuanze'>" +
+                                    "<a class='M_clear' href='javascript:void(0)' >删除</a>" +
+                                    "<a class='M_look' target='_blank' href='javascript:void(0)'>查看详情</a>" +
+                                    "</div>" +
+                                    "</li>";
+                                $(".M_like_bd ul").append(li);
+                            })
+                        } else {
+                            // console.log(222);
+                            $(".empty").show();
+                        }
+                        $(".M_like_bd ul li").each(function () {
+                            // console.log($("h3 a").text());
+                            $(this).find(".M_clear").click(function () {
+                                var p_name = $(this).parents("li").find("h3 a").text();
+                                // console.log(p_name)
+                                clear(p_name);
+                                $(".M_like_bd ul li").remove();
+                                queryCollection();
+                            })
+                        })
+                        var height = $(document.body).height();
+                        // console.log("height:"+height)
+                        $(parent.document.getElementById("iframepage")).height(height);
+                        $(".del").css({"color":"#B0B0B0","font-size":"14px","margin-left":"10px"})
+                    },
+                    error:function () {
+                        $(".empty").show();
+                        var height = $(document.body).height();
+                        // console.log("height:"+height)
+                        $(parent.document.getElementById("iframepage")).height(height);
+                    }
+                })
+            }
+			function clear(p_name) {
+			    // console.log("11"+p_name)
+				$.ajax({
+					url:"/product/clearCollection.do",
+					type:"post",
+					data:{
+					    p_name:p_name,
+						userName:$.cookie("cookie_userName")
+					},
+					dataType:"text",
+					success:function(data){
+					    // console.log(p_name);
+					    // console.log($.cookie("cookie_userName"));
+                        // if(data==1){
+					     //    alert("删除成功！");
+						// }else{
+					     //    alert("删除失败");
+						// }
+					}
+				})
+            }
+		</script>
+		<style>
+			.empty{
+				margin: 40px 0;
+				font-size: 18px;
+				text-align: center;
+				color: #b0b0b0;
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header></header>
+		<section>
+			<div class="M_like">
+				<div class="M_like_1">
+					<div class="M_like_2">
+						<div class="M_like_hd">
+							<p>喜欢的商品</p>
+						</div>
+						<div class="M_like_bd">
+							<p class="empty">您暂未收藏任何商品。</p>
+							<ul>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer></footer>
+	</body>
+
+</html>

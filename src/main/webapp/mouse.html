@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$(".top01").click(function() {
+					$(".X_ringt").load("comment.html", function(response, status, xhr) {
+						$('.X_ringt').html(response);
+					});
+				});
+				$(".top02").click(function() {
+					$(".X_ringt").load("order.html", function(response, status, xhr) {
+						$('.X_ringt').html(response);
+						
+						
+					});
+				})
+				$(".top03").click(function() {
+					$(".X_ringt").load("TV_Center_Receiver.html", function(response, status, xhr) {
+						$('.X_ringt').html(response);
+						
+					});
+				});
+				$(".top04").click(function() {
+					$(".X_ringt").load("d4.html", function(response, status, xhr) {
+						$('.X_ringt').html(response);
+						
+					});
+				});
+				$(".top05").click(function() {
+					$(".X_ringt").load("d5.html", function(response, status, xhr) {
+						$('.X_ringt').html(response);
+						
+					});
+				});
+				$(".top06").click(function() {
+					$(".X_ringt").load("d6.html", function(response, status, xhr) {
+						$('.X_ringt').html(response);
+						
+					});
+				});
+//				$(".top01",".top02").bind({
+//					"click":function  () {
+//						$(".top01").css("color","red")
+//					},
+//					"click":function  () {
+//						$(".top02").css("color","red")
+//					},
+//					"click":function  () {
+//						$(".top03").css("color","red")
+//					},
+//					"click":function  () {
+//						$(".top04").css("color","red")
+//					},
+//					"click":function  () {
+//						$(".top05").css("color","red")
+//					},
+//					"click":function  () {
+//						$(".top06").css("color","red")
+//					}
+//				})
+
+			})
+		</script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#X_bzzxddcz {
+				width: 1250px;
+				height: 1500px;
+				border: 1px solid red;
+				margin: 0 auto;
+				background-color: #F5F5F5;
+			}
+			
+			/*.X_left_right {
+				
+			}*/
+			
+			.X_left_right:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+			
+			.X_left {
+				width: 240px;
+				height: 400px;
+				border: 1px solid red;
+				float: left;
+				background-color: white;
+				border-left: 30px;
+			}
+			
+			h3 {
+				margin: 45px;
+			}
+			
+			ul {
+				margin: 45px;
+			}
+			
+			.X_left ul li {
+				list-style-type: none;
+				line-height: 30px;
+				color: #CDC9C9;
+				font-family: "雅黑";
+				cursor: pointer;
+			}
+			
+			.X_left ul li:hover {
+				color: red;
+			}
+			
+			.X_ringt {
+				width: 990px;
+				/*height: 1000px;*/
+				border: 1px solid red;
+				float: right;
+				background-color: white;
+				box-sizing: border-box;
+				padding-left: 50px;
+			}
+		</style>
+	</head>
+	<div id="X_bzzxddcz">
+		<div class="X_tou">
+			<span>首页/&nbsp;</span><span>&nbsp;帮助中心&nbsp;/</span>
+			<span>&nbsp;订单操作&nbsp;/</span><span class="X_xiabiao">变更</span>
+		</div>
+		<div class="X_left_right">
+
+			<div class="X_left">
+				<h3>订单操作</h3>
+				<ul>
+
+					<li class="top01">订单异常</li>
+					<li class="top02">优惠券查询</li>
+					<li class="top03">发票修改查询</li>
+					<li class="top04">修改、取消订单</li>
+					<li class="top05">订单拒收如何处理</li>
+					<li class="top06">查询订单、物流信息</li>
+				</ul>
+			</div>
+			<div class="X_ringt">
+
+			</div>
+		</div>
+	</div>
+
+	<body>
+	</body>
+
+</html>

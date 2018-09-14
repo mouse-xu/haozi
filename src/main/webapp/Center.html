@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>个人中心</title>
+        <script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/jquery.cookie.js" type="text/javascript"></script>
+        <script src="js/TV.js" type="text/javascript"></script>
+		<style type="text/css">
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			a{
+				text-decoration: none;
+			}
+			ul{
+				list-style: none;
+			}
+			.M_you{
+				width: 978px;
+				/*border: 1px solid red;*/
+			}
+			.M_uc-box {
+				padding: 36px 0;
+				background: #fff;
+			}
+			.M_ucbox{
+				margin: 0 48px;
+			}
+			.M_box-bd{
+				padding-top: 24px;
+			}
+			.M_portal-main{
+				overflow: hidden;
+			}
+			.M_user-card{
+				position: relative;
+				float: left;
+			    width: 302px;
+			    height: 160px;
+			    padding-left: 180px;
+			    padding-top: 40px;
+			}
+			.M_user-card:after{
+				content: '';
+				display: block;
+				clear: both;
+			}
+			.M_user-card h2{
+				margin: 0;
+			    font-size: 24px;
+			    font-weight: 400;
+			    color: #616161;
+			}
+			.M_user-card p{
+				margin: 0 0 10px;
+    			color: #b0b0b0;
+			}
+			.M_user-card a{
+				font-size: 12px;
+    			color: #ff6700;
+			}
+			.M_user-card img{
+				position: absolute;
+				left: 0;
+				top: 0;
+			    padding: 4px;
+			    border: 1px solid #e0e0e0;
+			    border-radius: 150px;
+			}
+			.M_user-actions{
+				float: right;
+			    width: 358px;
+			    margin-top: 35px;
+			}
+			.M_user-actions:after{
+				content: '';
+				display: block;
+				clear: both;
+			}
+			.M_user-actions ul{
+				margin: 0;
+    			padding: 0;
+    			color: #757575;
+			}
+			.M_user-actions ul li{
+				position: relative;
+    			padding: 6px 0;
+			}
+			.M_user-actions .level{
+				color: #ffac13;
+			}
+			.M_user-actions .btn-small{
+				width: 118px;
+			    height: 28px;
+			    font-size: 12px;
+			    line-height: 28px;
+			    background: #ff6700;
+			    border-color: #ff6700;
+			    color: #fff;
+			    border: 1px solid #ff6700;
+			    text-align: center;
+			    cursor: pointer;
+			    position: absolute;
+			    right: 0;
+			    top: 0;
+			}
+			.M_user-actions .btn-small:hover{
+				background: orangered;
+			}
+			.M_portal-sub{
+				border-top: 1px solid #e0e0e0;
+			}
+			.M_portal-sub:after{
+				content: '';
+				display: block;
+				clear: both;
+			}
+			.M_portal-sub ul{
+				margin: 0;
+			    padding: 60px 0 0;
+			    list-style-type: none;
+			    color: #757575;
+			    overflow: hidden;
+			}
+			.M_portal-sub ul li{
+				position: relative;
+			    float: left;
+			    width: 276px;
+			    height: 65px;
+			    padding-left: 112px;
+			    padding-top: 15px;
+			    margin-left: 14px;
+			    margin-bottom: 80px;
+			}
+			.M_portal-sub h3{
+				margin: 0;
+			    font-size: 18px;
+			    font-weight: 400;
+			}
+			.M_portal-sub h3>span{
+				color: #ff6700;
+			}
+			.M_portal-sub a{
+				color: #757575;
+			}
+			.M_portal-sub a:hover{
+				color: #ff6700;
+			}
+			.M_portal-sub img{
+				position: absolute;
+				left: -10px;
+				top: -10px;
+			}
+		</style>
+	</head>
+
+	<body onload="IFrameResize()">
+		<header></header>
+		<section>
+			<div class="M_you">
+				<div class="M_uc-box">
+					<div class="M_ucbox">
+						<div class="M_box-bd">
+							<div class="M_portal-main">
+								<div class="M_user-card">
+									<h2 id="u_id">1497527978</h2>
+									<p>你好～</p>
+									<a href="AccountSafe.html" target="_blank">修改个人信息 &gt;</a>
+									<img src="img/photo.jpg" width="150" height="150" id="userImg">
+								</div>
+								<div class="M_user-actions">
+									<ul>
+										<li>账户安全：<span class="level">普通</span></li>
+										<li>绑定手机：<span class="tel">199********27</span></li>
+
+										<li>绑定邮箱：<span class="email"></span>
+											<a href="AccountSafe.html" class="btn-small" target="_blank" >绑定</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="M_portal-sub">
+								<ul>
+									<li>
+										<img src="img/portal-icon-1.png">
+										<h3>待支付的订单：<span class="countWaitPay">0</span></h3>
+										<a href="order.html" class="countWaitPay1">查看待支付订单<span>></span></a>
+									</li>
+									<li>
+										<img src="img/portal-icon-2.png">
+										<h3>待收货的订单：<span  class="countWaitReceive">0</span></h3>
+										<a href="order.html" class="countWaitReceive1">查看待收货订单<span>></span></a>
+									</li>
+									<li>
+										<img src="img/portal-icon-3.png">
+										<h3>待评价商品数：<span  class="countNoComment">0</span></h3>
+										<a href="comment.html" class="countNoComment1">查看待评价商品<span>></span></a>
+									</li>
+									<li>
+										<img src="img/portal-icon-4.png">
+										<h3>喜欢的商品：<span class="lovePro">0</span></h3>
+										<a href="Like.html" class="lovePro1">查看喜欢的商品<span >></span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer></footer>
+        <script>
+            function IFrameResize() {
+                var height = $(document.body).height();
+                // console.log("height:"+height)
+                $(parent.document.getElementById("iframepage")).height(height);
+            }
+            $(function () {
+                showCenter();
+                $(".countWaitPay1").click(function () {
+                    $.cookie("cookie_orderMsg","0")
+                })
+                $(".countWaitReceive1").click(function () {
+                    $.cookie("cookie_orderMsg","1")
+                })
+
+            })
+        </script>
+	</body>
+
+</html>

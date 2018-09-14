@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+		<script src="js/jquery.cookie.js" type="text/javascript"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			a{
+				text-decoration: none;
+			}
+			.M_toubu{
+				background: #fff;
+			    width: 412px;
+			    min-height: 300px;
+			    height: auto;
+			    padding: 0 14px 30px;
+			    line-height: 20px;
+			    border-radius: 5px;
+			    color: #666;
+			    position: relative;
+			    z-index: 4;
+			    border: 1px solid #838383;
+			    margin-top: 27.5px; 
+			    top: 0px; 
+			    margin-left: 462px; 
+			    left: 0px;
+			}
+			.M_toubu_hd{
+				height: 42px;
+			    padding-top: 13px;
+			    line-height: 42px;
+			    border-bottom: 1px solid #e6e6e6;
+			    position: relative;
+			}
+			.M_toubu_hd .M_text{
+				color: #1e1e1e;
+			    font-size: 15px;
+			    font-weight: bold;
+			}
+			.M_toubu_hd a{
+				color: gray;
+			    overflow: hidden;
+			    position: absolute;
+			    top: 7px;
+			    right: 7px;
+			    cursor: pointer;
+			}
+			.M_tip_1{
+				width: 300px;
+				margin: 0 auto;
+			}
+			.M_two{
+				padding: 40px 0 10px 0;
+				font-size:  15px;
+				color: #333333;
+			}
+			.M_twoer{
+				padding: 10px 0 15px 0;
+				font-size: 14px;
+				color: #666666;
+			}
+			.M_twoer .mmm{
+				color: red;
+				padding-top:10px;
+				
+			}
+			.M_twoer input{
+				line-height: 20px;
+				height: 20px;
+				width: 300px;
+			    padding: 10px;
+			    color: #333;
+			}
+			.M_btns{
+				height: 35px;
+				padding-top: 25px;
+				text-align: center;
+			}
+			.M_btns button{
+				background: #ff6700;
+			    border: 1px solid #ff6700;
+			    color: #fff;
+			    min-width: 100px;
+			    height: 33px;
+			    margin: 0 2px;
+			    padding: 0 10px;
+			    line-height: 33px;
+			    text-align: center;
+			    display: inline-block;
+			    vertical-align: middle;
+			    cursor: pointer;
+			}
+			.M_bottom{
+				padding-top: 20px;
+				text-align: center;
+			}
+			.M_bottom a{
+				color: #46639c;
+				font-size: 14px ;
+			}
+			.M_bottom a:hover{
+				text-decoration: underline;
+			}
+			.M_success{
+				text-align: center;
+				margin-top: 100px;
+				color: #333333;
+				display: none;
+				
+			}
+		</style>
+		<script type="text/javascript">
+			$(function(){
+				$(".M_close").click(function(){
+					$(".M_toubu").hide();
+				})
+               /* $("#M_cess").click(function(){
+                    location.href="Center.html";
+                })*/
+
+				
+				
+				
+				$(".M_btns").click(function(){
+					var email = $("input[id=email]");
+					var reg = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$");	
+					if(email.val()==''){
+						$(".mmm").show().html("邮箱不能为空");
+						$("input[id=email]").focus(function () {
+	                        $(".mmm").show().html("");
+	                    })
+						
+					}else if(!reg.test(email.val())){
+				　　　　 $(".mmm").show().html("邮箱格式不正确");
+						$("input[id=email]").focus(function () {
+	                        $(".mmm").show().html("");
+	                   })
+				　　}else{
+
+                        getlog(email);
+					}
+				})
+			})
+			function getlog(email) {
+                var u_idStr = $.cookie("cookie_u_id");
+                if (!u_idStr || u_idStr == "" || u_idStr == "null") {
+                    return;
+                }
+                $.ajax({
+                    type: "get",
+                    url: "account/modified.do",
+                    data: {
+                        u_id: u_idStr,
+                        email: $("input[id=email]").val()
+                    },
+                    datatype: "text",
+                    success: function (data) {
+                        console.log(data);
+						if(data==88){
+                            $(".mmm").show().html("此邮箱已被绑定其他账号!");
+						}else {
+                            $(".M_tip").hide();
+                            $(".M_success").show();
+						}
+                    }
+                });
+            }
+		</script>
+	</head>
+
+	<body>
+		<div class="M_toubu">
+			<div class="M_toubu_1">
+				<div class="M_toubu_hd">
+					<div class="M_text">修改安全邮箱</div>
+					<a href="javascript:void(0)" title="" ><span class="M_close">x</span></a>
+				</div>
+				<div class="M_tip">
+						<div class="M_tip_1">
+							<div class="M_two">
+								<h4>请输入邮箱地址</h4> 
+							</div>
+							<div class="M_twoer">
+								<p> 
+									<input type="text" id="email" placeholder="邮箱地址" />
+									<div class="mmm">
+										
+									</div>
+								</p>
+							</div>
+						</div>
+						<div class="M_btns"> 
+							<button>确认修改</button> 
+						</div>
+				</div>
+				<div class="M_success">
+					<div class="M_succ">
+						<h2>邮箱修改成功</h2> 
+					</div>
+					<div class="M_btns" id="M_cess"> 
+						<button>完成修改</button> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

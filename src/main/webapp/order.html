@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+        <script src="js/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/jquery.cookie.js" type="text/javascript"></script>
+        <script src="js/TV.js" type="text/javascript"></script>
+		<style type="text/css">
+			.x_box {
+				padding: 36px 0px 0px;
+				background: #fff;
+			}
+			
+			div {
+				display: block;
+			}
+			
+			.x_content {
+				margin: 0 48px;
+			}
+			
+			.x_content .x_hd .x_title {
+				margin: 0;
+				font-size: 30px;
+				font-weight: 400;
+				line-height: 68px;
+				color: #757575;
+			}
+			
+			h1 {
+				font-size: 2em;
+				margin: 0.67em 0;
+				display: block;
+				font-size: 2em;
+				-webkit-margin-before: 0.67em;
+				-webkit-margin-after: 0.67em;
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+				font-weight: bold;
+			}
+			
+			.x_content .x_hd small {
+				margin-left: 10px;
+				font-size: 12px;
+				line-height: 1.5;
+			}
+			
+			.x_content .x_hd small a {
+				color: #757575;
+				text-decoration: none;
+				font-size: 12px;
+				line-height: 1.5;
+			}
+			
+			a {
+				text-decoration: none;
+				color: #757575;
+			}
+			
+			.x_more {
+				width: 882px;
+				border-bottom: 0;
+				border-bottom: 1px solid #e0e0e0;
+			}
+			
+			.clearfix:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+			
+			.x_filt_list {
+				float: left;
+				margin: 0;
+				padding: 18px 0;
+				list-style-type: none;
+				font-size: 16px;
+				line-height: 1.25;
+			}
+			
+			ul {
+				padding: 0 0 0 40px;
+				margin: 1em 0;
+				-webkit-margin-before: 1em;
+				-webkit-margin-after: 1em;
+				-webkit-margin-start: 0px;
+				-webkit-margin-end: 0px;
+				-webkit-padding-start: 40px;
+			}
+			
+			.first {
+				padding-left: 0;
+				border-left: 0;
+			}
+			
+			.x_filt_list li {
+				float: left;
+				padding: 0 20px;
+				border-left: 1px solid #e0e0e0;
+				color: #757575;
+			}
+			
+			li {
+				display: list-item;
+				text-align: -webkit-match-parent;
+			}
+			
+			.x_form_sea {
+				float: right;
+				position: relative;
+				width: 262px;
+				height: 40px;
+				margin-top: 8px;
+			}
+			
+			form {
+				margin: 0;
+				display: block;
+			}
+			
+			.x_form_text {
+				position: absolute;
+				top: 0;
+				right: 41px;
+				z-index: 1;
+				width: 189px;
+				height: 40px;
+				padding: 0 15px;
+				border: 1px solid #e0e0e0;
+				font-size: 12px;
+				line-height: 40px;
+				outline: 0;
+				color: #757575;
+				-webkit-transition: all .2s;
+				transition: all .2s;
+			}
+			
+			input[type="text"] {
+				-webkit-appearance: textfield;
+				-webkit-box-sizing: content-box;
+				box-sizing: content-box;
+			}
+			
+			input {
+				line-height: normal;
+				margin: 0;
+				vertical-align: baseline;
+				font-family: sans-serif;
+			}
+			
+			.x_form_bot {
+				position: absolute;
+				right: 0;
+				top: 0;
+				z-index: 2;
+				width: 40px;
+				height: 35px;
+				border: 1px solid #e0e0e0;
+				font-size: 24px;
+				/*line-height: 24px;*/
+				background: #fff;
+				color: #616161;
+				outline: 0;
+                text-align: center;
+                display: inline-block;
+                padding-top: 5px;
+				/*transition: all .2s;*/
+			}
+            .x_form_bot:hover{
+                background-color: #f5f5f5;
+            }
+			/*input[type="submit"] {*/
+                     /*-webkit-appearance: button;*/
+                     /*cursor: pointer;*/
+                     /*border-radius: 0;*/
+                     /*font-family: "iconfont" !important;*/
+                     /*font-style: normal;*/
+                     /*-webkit-font-smoothing: antialiased;*/
+                     /*-webkit-text-stroke-width: 0.2px;*/
+                 /*}*/
+			
+			.x_order_list {
+				margin: 0;
+				padding: 10px 0;
+				list-style-type: none;
+			}
+			
+			.x_box_bd {
+				width: 885px;
+			}
+			
+			.x_ord_item {
+				border-color: #b0b0b0;
+				margin-bottom: 20px;
+				border: 1px solid #e0e0e0;
+				position: relative;
+			}
+			
+			.x_ord_sum {
+				padding: 25px 30px 1px;
+			}
+			
+			.x_ord_status {
+				font-size: 18px;
+			}
+			
+			.x_ord_tetail {
+				width: 100%;
+			}
+			
+			table {
+				border-collapse: collapse;
+				border-spacing: 0;
+				display: table;
+				border-collapse: separate;
+				border-spacing: 2px;
+				border-color: grey;
+			}
+			
+			thead {
+				display: table-header-group;
+				vertical-align: middle;
+				border-color: inherit;
+			}
+			
+			tr {
+				display: table-row;
+				vertical-align: inherit;
+				border-color: inherit;
+			}
+			
+			.x_col_main {
+				padding-left: -10px;
+			}
+			
+			.x_ord_detail th {
+				height: 28px;
+				padding-bottom: 24px;
+				border-bottom: 1px solid #e0e0e0;
+				font-weight: 400;
+				text-align: left;
+				color: #757575;
+				vertical-align: bottom;
+			}
+			
+			.x_col_main p {
+				margin: 0;
+				margin: 1em 0;
+			}
+			
+			.col_sub {
+				width: 330px;
+				padding-left: 50px;
+				text-align: right;
+			}
+			
+			.sep {
+				color: #e0e0e0;
+				margin: 0 .25em;
+				font-family: sans-serif;
+			}
+			
+			.col_sub {
+				/*width: 240px;*/
+				/*padding-left: 10px;*/
+				/*text-align: right;*/
+				/*padding-right: 30px;*/
+			}
+			
+			.num {
+				height: 18px;
+				margin-right: 5px;
+				font-size: 28px;
+				font-weight: 400;
+				line-height: 1;
+				color: #333;
+			}
+			
+			tr {
+				display: table-row;
+				vertical-align: inherit;
+				border-color: inherit;
+				padding: 0 30px;
+				display: table-cell;
+				vertical-align: inherit;
+			}
+			
+			.goods_list {
+				margin: 0;
+				padding: 10px 0;
+				list-style-type: none;
+				width: 540px;
+			}
+			
+			.goods_list li {
+				position: relative;
+				height: 44px;
+				margin: 30px 0;
+				padding: 6px 10px 6px 10px;
+				line-height: 22px;
+				color: #333;
+				padding-bottom: 20px;
+			}
+            .goods_list>li:nth-of-type(1) {
+                margin-top: 0px;
+            }
+			
+			.x_figure {
+				position: absolute;
+				top: 10px;
+			}
+			
+			.name {
+				padding-left: 90px;
+			}
+			
+			.price {
+				/*padding-top: 10;*/
+				padding-left: 90px;
+			}
+			
+			.ord_actions {
+				width: 220px;
+				/*height: 280px;*/
+				padding-top: 20px;
+				text-align: right;
+				vertical-align: top;
+			}
+			
+			.ord_actions .btn {
+				display: block;
+				margin: 0 0 10px auto;
+				border-color: #b0b0b0;
+				background: #fff;
+				color: #757575;
+			}
+			
+			.btn_small {
+				width: 118px;
+				height: 28px;
+				font-size: 12px;
+				line-height: 28px;
+			}
+			
+			.btn {
+				display: inline-block;
+				width: 158px;
+				height: 38px;
+				padding: 0;
+				margin: 0;
+				border: 1px solid #b0b0b0;
+				font-size: 14px;
+				line-height: 38px;
+				text-align: center;
+				color: #b0b0b0;
+				cursor: pointer;
+				-webkit-transition: all .4s;
+				transition: all .4s;
+			}
+            #x_waitPayOrder1,#x_waitReceiveOrder1,#x_ClosedOrder1{
+                display: none;
+            }
+            .x_price{
+                text-indent: 130px;
+            }
+            .receiverName{
+                font-style: normal;
+            }
+            .ord_actions .payNow{
+                /*display: inline-block ;*/
+                background-color:  #FF6700;
+                /*display: none;*/
+            }
+            .ord_actions .payNow:hover{
+                display: inline-block ;
+                background-color: #f25807;
+            }
+            #sessonRoot{
+                width: 980px;
+                margin: 0 auto;
+            }
+            #resultSign{
+                display: none;
+                width: 980px;
+                height: 200px;
+                background-color: white;
+                font-size: 18px;
+                line-height: 200px;
+                text-align: center;
+                color: #b0b0b0;
+            }
+            .x_filt_list>li:hover .x_filt_list>li>a{
+                color: #ff6700;
+            }
+		</style>
+	</head>
+
+	<body onload="IFrameResize()">
+		<div id="sessonRoot">
+            <div class="x_box main-box">
+                <div class="x_content list-box">
+                    <div class="x_hd">
+                        <h1 class="x_title">
+                            我的订单
+                            <small>
+                                请警方钓鱼连接或诈骗电话
+                                <a href="javascript:void(0)">了解更多</a>
+                            </small>
+                        </h1>
+                        <div class="x_more clearfix">
+                            <ul class="x_filt_list type">
+                                <li class="x_first" id="x_allOrder">
+                                    <a href="javascript:void(0)" >全部有效订单</a>
+                                </li>
+                                <li id="x_waitPayOrder">
+                                    <a href="javascript:void(0)" >待支付</a>
+                                </li>
+                                <li id="x_waitReceiveOrder">
+                                    <a href="javascript:void(0)" >待收货</a>
+                                </li>
+                                <li id="x_FinishedOrder">
+                                    <a href="javascript:void(0)" >已收货</a>
+                                </li>
+                                <li id="x_ClosedOrder">
+                                    <a href="javascript:void(0)" >已关闭</a>
+                                </li>
+                            </ul>
+                            <form action="#" class="x_form_sea">
+                                <input type="text" name=""  class="x_form_text" value="" placeholder="输入商品名称、商品编号、订单号" onKeyPress="IsEnterKeyPress()"/>
+                                <a href="javascript:void(0)" class="x_form_bot"><img src="img/y_6_2.png" alt="" width="30px" height="30px"></a>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="x_box_bd">
+                        <div id="x_allOrder1">
+                            <ul class="x_order_list" style="display: none;">
+                                <li class="x_ord_item">
+                                    <div class="x_ord_detail">
+                                        <div class="x_ord_sum">
+                                            <div class="x_ord_status">
+                                                已收货
+                                            </div>
+                                        </div>
+                                        <table class="x_ord_tetail">
+                                            <thead>
+                                            <tr>
+                                                <th class="x_col_main">
+                                                    <p class=" x_info">2016年09月01日 20:47
+                                                        <span class="sep">|</span> 徐浩然
+                                                        <span class="sep">|</span> 订单号：
+                                                        <a href="javascript:void(0)">00000000000</a>
+                                                        <span class="sep">|</span> 在线支付
+                                                    </p>
+                                                </th>
+                                                <th class="col_sub">
+                                                    <p class="x_price">
+                                                        订单金额：
+                                                        <span class="num">336.00</span> 元
+                                                    </p>
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td class="ord_items">
+                                                    <ul class="goods_list">
+                                                        <li>
+                                                            <div class="x_figure">
+                                                                <a href="javascript:void(0)"><img src="img/luyou.jpg" /></a>
+                                                            </div>
+                                                            <p class="name">
+
+                                                                <a href="javascript:void(0)">小米路由3 白色</a>
+                                                            </p>
+                                                            <p class="price">149元*1</p>
+                                                        </li>
+                                                    </ul>
+                                                </td>
+
+                                                <td class="ord_actions">
+                                                    <a href="javascript:void(0)" class="btn btn_small">订单详情</a>
+                                                    <a href="javascript:void(0)" class="btn btn_small">申请售后</a>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </li>
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div id="resultSign">~没有查到符合您条件的订单~</div>
+        </div>
+<script>
+    $(function () {
+        //读取后台订单信息并输出值前台
+        var orderMsg = $.cookie("cookie_orderMsg");
+        if(orderMsg==0||orderMsg==1||orderMsg==2||orderMsg==3){
+            showOrdersInfo(orderMsg);
+            $.cookie("cookie_orderMsg","-1");
+        }else {
+            showOrdersInfo(-1);
+        }
+        $("#x_allOrder").click(function () {
+            showOrdersInfo(-1);
+        })
+        $("#x_waitPayOrder").click(function () {
+            showOrdersInfo(0);
+        })
+        $("#x_waitReceiveOrder").click(function () {
+            showOrdersInfo(1);
+        })
+        $("#x_FinishedOrder").click(function () {
+            showOrdersInfo(2);
+        })
+        $("#x_ClosedOrder").click(function () {
+            showOrdersInfo(3);
+        })
+        $("#x_allOrder1").delegate(".btn_small", "click",function () {
+            var o_idStr = $(this).closest(".x_order_list").find(".o_id").text();
+                $.cookie("cookie_o_id",o_idStr);
+        })
+        $(".x_form_bot").click(function () {
+            var argument = $(".x_form_text").val();
+            // console.log(argument);
+            if(argument==""){
+                console.log("请输入查询条件");
+                return;
+            }
+            queryOrders(argument);
+        })
+        $(".main-box").delegate(".payNow","click",function () {
+            var str = $(this).text();
+            var o_idStr = $(this).closest(".x_order_list").find(".o_id").text();
+            console.log("str:"+str);
+            if(str=="立即付款"){
+                console.log("前往付款");
+                var price = $(this).closest(".x_order_list").find(".num").text();
+                $.cookie("WIDout_trade_no",o_idStr);
+                $.cookie("WIDtotal_amount",price);
+                // console.log($.cookie("WIDout_trade_no"));
+                // console.log($.cookie("WIDtotal_amount"));
+                toPay(0);
+            }else if(str=="确认收货"){
+                console.log("前往收货");
+                sureGot(o_idStr);
+            }
+
+        })
+
+    })
+    function IsEnterKeyPress(){
+        var lKeyCode = (navigator.appname=="Netscape")?event.which:window.event.keyCode;
+        if ( lKeyCode == 13 ){
+            var argument = $(".x_form_text").val();
+            // console.log(argument);
+            if(argument==""){
+                console.log("请输入查询条件");
+                return;
+            }
+            queryOrders(argument);
+        }
+    }
+    function IFrameResize() {
+        var height = $(document.body).height();
+        // console.log("height:"+height)
+        $(parent.document.getElementById("iframepage")).height(height);
+    }
+</script>
+	</body>
+
+</html>
